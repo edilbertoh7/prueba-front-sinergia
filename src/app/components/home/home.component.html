@@ -1,0 +1,16 @@
+<div class="container">
+<div class="card-columns">
+  <div *ngFor="let imagen of imagenes; let i= index"  class="card">
+    <img [src]="imagen.webformatURL" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title"> {{ imagen.nombre }} </h5>
+      <p class="card-text"><strong>Me gusta</strong> {{ imagen.likes }}.</p>
+      <p class="card-text"><strong class="card-text"> comentarios  </strong>{{imagen.comments}}</p>
+
+      <!-- <button  type="button" class="btn btn-outline-primary btn-block boton " >Ver más...</button> -->
+      <a routerLink='/imagenes' class="btn btn-outline-primary btn-block" >ver más link</a>
+    </div>
+  </div>
+
+  </div>
+</div>
