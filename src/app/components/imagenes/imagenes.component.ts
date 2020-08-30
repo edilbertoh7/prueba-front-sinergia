@@ -24,20 +24,6 @@ export class ImagenesComponent {
     this.categoria = event.target.value;
   }
 
-  /**MOSTRAR/OCULTAR EL BODY DE LA TARGETA*/
-  clickCard(event: any){
-
-    if(event.target.nextSibling.classList.contains('d-none'))
-    {
-      event.target.nextSibling.className='card-body';
-    }
-    else {
-      event.target.nextSibling.className='card-body d-none';
-    }
-  }
-
-
-
   buscarimagen(termino: string, categoria: string){
 
     if ( termino != '' && this.categoria == '')
@@ -56,14 +42,25 @@ export class ImagenesComponent {
     {
       var URL = '';
     }
-    console.log(categoria);
+
     axios.get('https://pixabay.com/api/?key=13119377-fc7e10c6305a7de49da6ecb25&lang=es'+URL)
     .then((response)=> {
 
       this.imagenes = response.data.hits;
-      console.log(this.imagenes);
+      //console.log(this.imagenes);
 
     });
 
+  }
+  // funcion para mostrar u ocultar los dettalles de la imagen
+  ocultar(event: any){
+
+    if ( event.target.nextSibling.classList.contains('d-none'))
+    {
+      event.target.nextSibling.className='card-body';
+    }
+    else {
+      event.target.nextSibling.className='card-body d-none';
+    }
   }
 }

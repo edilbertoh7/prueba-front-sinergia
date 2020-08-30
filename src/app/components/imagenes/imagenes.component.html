@@ -1,17 +1,11 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-
-
     </ul>
     <div class="row">
       <div class="form-inline my-2 my-lg-0">
-
           <input class="form-control mr-sm-5" type="text" placeholder="Buscar "  (keyup.enter)="buscarimagen(termino.value)" maxlength="100" #termino >
-
       </div >
-
       <div class="form-inline my-2 my-lg-0">
         <select class="form-control mr-sm-5" (change)="buscarcategorias($event)" #categoria >
           <option value="">Todas</option>
@@ -19,14 +13,11 @@
         </select>
         <button (click)="buscarimagen(termino.value,categoria.value)" class="btn btn-outline-primary my-2 my-sm-0" type="button"  >Buscar</button>
       </div>
-
-      </div>///
-
+      </div>
   </div>
 </nav>
-
 <div class="card-columns">
-  <div *ngFor="let imagen of imagenes; let i= index"   class="card" (click)="clickCard($event)">
+  <div *ngFor="let imagen of imagenes; let i= index"   class="card" (click)="ocultar($event)">
     <img [src]=" imagen.largeImageURL " class="card-img-top" alt="...">
     <div class="card-body" >
       <p class="card-text">
@@ -39,9 +30,6 @@
         <br>
         <strong class="card-text">Vistas:</strong> {{ imagen.views }}
       </p>
-
-
     </div>
   </div>
-
   </div>

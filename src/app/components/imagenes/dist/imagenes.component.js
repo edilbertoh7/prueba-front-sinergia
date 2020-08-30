@@ -26,15 +26,6 @@ var ImagenesComponent = /** @class */ (function () {
     ImagenesComponent.prototype.buscarcategorias = function (event) {
         this.categoria = event.target.value;
     };
-    /**MOSTRAR/OCULTAR EL BODY DE LA TARGETA*/
-    ImagenesComponent.prototype.clickCard = function (event) {
-        if (event.target.nextSibling.classList.contains('d-none')) {
-            event.target.nextSibling.className = 'card-body';
-        }
-        else {
-            event.target.nextSibling.className = 'card-body d-none';
-        }
-    };
     ImagenesComponent.prototype.buscarimagen = function (termino, categoria) {
         var _this = this;
         if (termino != '' && this.categoria == '') {
@@ -49,12 +40,20 @@ var ImagenesComponent = /** @class */ (function () {
         else {
             var URL = '';
         }
-        console.log(categoria);
         axios_1["default"].get('https://pixabay.com/api/?key=13119377-fc7e10c6305a7de49da6ecb25&lang=es' + URL)
             .then(function (response) {
             _this.imagenes = response.data.hits;
-            console.log(_this.imagenes);
+            //console.log(this.imagenes);
         });
+    };
+    // funcion para mostrar u ocultar los dettalles de la imagen
+    ImagenesComponent.prototype.ocultar = function (event) {
+        if (event.target.nextSibling.classList.contains('d-none')) {
+            event.target.nextSibling.className = 'card-body';
+        }
+        else {
+            event.target.nextSibling.className = 'card-body d-none';
+        }
     };
     ImagenesComponent = __decorate([
         core_1.Component({
