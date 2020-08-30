@@ -15,7 +15,6 @@ var app_routing_module_1 = require("./app-routing.module");
 /** modulos */
 var app_component_1 = require("./app.component");
 var navbar_component_1 = require("./components/shared/navbar/navbar.component");
-var home_component_1 = require("./components/home/home.component");
 var imagenes_component_1 = require("./components/imagenes/imagenes.component");
 var AppModule = /** @class */ (function () {
     function AppModule() {
@@ -25,7 +24,6 @@ var AppModule = /** @class */ (function () {
             declarations: [
                 app_component_1.AppComponent,
                 navbar_component_1.NavbarComponent,
-                home_component_1.HomeComponent,
                 imagenes_component_1.ImagenesComponent
             ],
             imports: [

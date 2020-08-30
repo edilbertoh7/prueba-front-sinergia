@@ -7,15 +7,16 @@ import { appRouting } from './app-routing.module';
 /** modulos */
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
-import { HomeComponent } from './components/home/home.component';
+
 import { ImagenesComponent } from './components/imagenes/imagenes.component';
+import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    HomeComponent,
-    ImagenesComponent
+    ImagenesComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
