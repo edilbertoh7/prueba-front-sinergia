@@ -26,7 +26,7 @@ var ImagenesComponent = /** @class */ (function () {
     ImagenesComponent.prototype.buscarcategorias = function (event) {
         this.categoria = event.target.value;
     };
-    ImagenesComponent.prototype.buscarimagen = function (termino, categoria) {
+    ImagenesComponent.prototype.buscarimagen = function (termino) {
         var _this = this;
         if (termino != '' && this.categoria == '') {
             var URL = '&q=' + termino;

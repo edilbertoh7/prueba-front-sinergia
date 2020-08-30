@@ -24,7 +24,7 @@ export class ImagenesComponent {
     this.categoria = event.target.value;
   }
 
-  buscarimagen(termino: string, categoria: string){
+  buscarimagen(termino: string){
 
     if ( termino != '' && this.categoria == '')
     {

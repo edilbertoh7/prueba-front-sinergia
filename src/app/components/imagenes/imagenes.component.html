@@ -11,7 +11,7 @@
           <option value="">Todas</option>
           <option *ngFor="let categoria of categorias" value="{{ categoria.nombre }}">{{ categoria.nombre }}</option>
         </select>
-        <button (click)="buscarimagen(termino.value,categoria.value)" class="btn btn-outline-primary my-2 my-sm-0" type="button"  >Buscar</button>
+        <button (click)="buscarimagen(termino.value)" class="btn btn-outline-primary my-2 my-sm-0" type="button"  >Buscar</button>
       </div>
       </div>
   </div>
